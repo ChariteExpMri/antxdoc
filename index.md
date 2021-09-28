@@ -4,10 +4,12 @@ You can download [ANTx2 from GitHub](https://github.com/ChariteExpMri/antx2/inde
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-Test link [XYZ](tutorial_prepareforFSL.pdf).
+Test link [XYZ](tutorial_prepareforFSL.pdf).<br>
+
+<! –– and the comment closes with
 [link2.pdf](https://github.com/ChariteExpMri/antxdoc/edit/gh-pages/index.md/tutorial_prepareforFSL.pdf).
 [link3.pdf](https://github.com/ChariteExpMri/antxdoc/edit/gh-pages/index.md/tutorial_prepareforFSL.pdf).
-
+ ––>
 link4 https://docs.google.com/viewer?url=https://github.com/ChariteExpMri/antxdoc/edit/gh-pages/index.md/tutorial_prepareforFSL.pdf
 
 ## UNDER CONSTRUCTION !!!! 
