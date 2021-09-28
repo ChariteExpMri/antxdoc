@@ -1,6 +1,6 @@
 ## Welcome to ANTx2
 
-You can download [ABTx2 from GitHub](https://github.com/ChariteExpMri/antx2/index.md).
+You can download [ANTx2 from GitHub](https://github.com/ChariteExpMri/antx2/index.md).
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
