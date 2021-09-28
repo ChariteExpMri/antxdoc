@@ -1,6 +1,6 @@
 ## Welcome to ANTx2
 
-You can download [ANTx2 from GitHub](https://github.com/ChariteExpMri/antx2/index.md).
+You can download [ANTx2 from GitHub](https://github.com/ChariteExpMri/antx2).
 
 
 
@@ -8,14 +8,19 @@ Tutorial preparation for FSL [XYZ](tutorial_prepareforFSL.pdf).<br>
 
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
 ## UNDER CONSTRUCTION !!!! 
 
 
-
+<br><br><br><br><br><br>
 
 
 <!---
