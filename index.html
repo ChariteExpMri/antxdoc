@@ -43,6 +43,17 @@
 <!-- link rel="shortcut icon" type="image/x-icon" href="/antxdoc/favicon.ico" -->
 
 <!-- end custom head snippets -->
+<script>
+function relPathToAbs (sRelPath) {
+  var nUpLn, sDir = "", sPath = location.pathname.replace(/[^\/]*$/, sRelPath.replace(/(\/|^)(?:\.?\/+)+/g, "$1"));
+  for (var nEnd, nStart = 0; nEnd = sPath.indexOf("/../", nStart), nEnd > -1; nStart = nEnd + nUpLn) {
+    nUpLn = /^\/(?:\.\.\/)*/.exec(sPath.slice(nEnd))[0].length;
+    sDir = (sDir + sPath.substring(nStart, nEnd)).replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((nUpLn - 1) / 3) + "}$"), "/");
+  }
+  return sDir + sPath.substr(nStart);
+}
+</script>
+
 
   </head>
   <body>
@@ -72,6 +83,37 @@
   <li><a href="https://chariteexpmri.github.io/antxdoc/tutorial_atlasRegistration.doc">test doc</a>.<br></li>
   
 </ul>
+
+<!--- ====================================================================================  --->
+<ul>
+  <li><a href="tutorial_prepareforFSL.pdf">Tutorial preparation for FSL</a>.<br></li>
+</ul>
+
+<ul>
+<li>
+bla 
+<br>
+<iframe src="https://docs.google.com/gview?url=https://chariteexpmri.github.io/antxdoc/tutorial_atlasRegistration.doc&embedded=true"></iframe>
+</li>
+
+
+
+
+
+</ul>
+<div>
+  <img id="ANSWER" width="80%" height="auto">
+</div>
+THIS
+<!-- <img :src="staticUrl + 'img/logo.png'">  --->
+<iframe src="'https://docs.google.com/gview?url=' + 'https://chariteexpmri.github.io/antxdoc' + '/docs/tutorial_atlasRegistration.doc' + '&embedded=true'"></iframe>
+
+
+
+var $ANSWER = 'cat';
+document.getElementById("ANSWER").src = 'pictures/animals/' + $ANSWER + '.jpg';
+console.log(document.getElementById('ANSWER').src);
+
 <!---
 <br>  
 THIS WORKS
@@ -82,12 +124,6 @@ THIS WORKS
   <br>
   --->
   
-  <base href="https://chariteexpmri.github.io/antxdoc/" />
-  
-  
-   <iframe src="https://docs.google.com/gview?url=./tutorial_atlasRegistration.doc&embedded=true"></iframe>r2
-
-<iframe src="https://docs.google.com/gview?url=tutorial_atlasRegistration.doc&embedded=true"></iframe>r3
 
 <p><br>
 <br>
