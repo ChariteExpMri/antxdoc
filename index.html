@@ -104,15 +104,19 @@ bla
 <div>
   <img id="ANSWER" width="80%" height="auto">
 </div>
-THIS
+THIS-2
 <!-- <img :src="staticUrl + 'img/logo.png'">  --->
 <iframe src="'https://docs.google.com/gview?url=' + 'https://chariteexpmri.github.io/antxdoc' + '/docs/tutorial_atlasRegistration.doc' + '&embedded=true'"></iframe>
-alert("hallo")
 
+<button onclick="myFunction()">Try it</button>
 
-var $ANSWER = 'cat';
-document.getElementById("ANSWER").src = 'pictures/animals/' + $ANSWER + '.jpg';
-console.log(document.getElementById('ANSWER').src);
+THIS-3
+<script>
+var str1="https://docs.google.com/gview?url=https://chariteexpmri.github.io/antxdoc/tutorial_atlasRegistration.doc";
+var str2="&embedded=true";
+var str3=str1+str2;
+</script>
+<iframe src=str3"></iframe>
 
 <!---
 <br>  
