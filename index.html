@@ -81,37 +81,214 @@ function relPathToAbs (sRelPath) {
 <!--- #######################################  -->
 <!--- ### TUTORIALS-START                  ###  -->
 <!--- #######################################  -->
-<h3 id="tutorials"> Multi-tube segmentation</h3>
-<p style="line-height:0.2;"><font color="black"><u> Scenario</font></u></p>
-<p style="line-height:0.2;"><font size=3px> - several ex-vivo skullstripped mouse brains within one MR-volume</font><br></p>
-<p style="line-height:0.2;"><font size=3px> - mouse brains are differently positioned in the MR bore</font><br></p>
-<p style="line-height:0.2;"><font color="black"><u> Goals</font></u></p>
-<p style="line-height:0.2;"><font size=3px> - Isolate mouse brains</font><br></p>
-<p style="line-height:0.2;"><font size=3px> - obtain orientation type for each animal</font><br></p>
-<p style="line-height:0.2;"><font size=3px> - register brains to Allen mouse brain atlas (ABA)</font><br></p>
-<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_tubeSegmentation_registration_feb2022.pdf"
-target="_blank"> tutorial .. newer version ("tutorial_tubeSegmentation_registration_feb2022.pdf")</a><br></font></p>
-<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_tubeSegmentation_manualSegment.pdf"
-target="_blank"> tutorial .. another approach (little older; "tutorial_tubeSegmentation_manualSegment.pdf")</a><br></font></p>
-<h3 id="tutorials"> Registration of CT and MRI data</h3>
-<p style="line-height:0.2;"><font color="black"><u> Scenario</font></u></p>
-<p style="line-height:0.2;"><font size=3px> - CT data has to be registered to MRI t2w-volume</font><br></p>
-<p style="line-height:0.2;"><font size=3px> - ...toDO...</font><br></p>
-<p style="line-height:0.2;"><font color="black"><u> Goals</font></u></p>
-<p style="line-height:0.2;"><font size=3px> - ...toDO...</font><br></p>
-<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_CTdata_registration.pdf"
-target="_blank"> tutorial .. "tutorial_CTdata_registration.pdf"</a><br></font></p>
-<br>
-<br>
-<br>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Registration to Standard-Space/Atlas-Registration</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aim</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+The tutorial shows how to setup the toolbox and register a t2w-image to Standard-Space
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Steps</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+(1) Setup ANT-TBX, <br>
+(2) Organize the study folder <br>
+(3) Start ANT-TBX<br>
+(4) Create a new project and load a project file <br>
+(5) Import Bruker raw-data <br>
+(6) Inspect the imported raw data <br>
+(7) Rename files, delete files, define the input image ("t2.nii") for atlas registration <br>
+(8) Perform atlas registration (registratiomn to standard space) <br>
+(9) Extract a 3d volume from a 4D volume and transform the 3d volume to Allen Space 
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_atlasRegistration.pdf"
+target="_blank">Tutorial: "tutorial_atlasRegistration.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Bruker Raw-Data Import</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aim</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+This tutorial shows how to import Bruker raw-data
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Steps</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- Setup ANT-TBX, <br>
+- Organize the study folder <br>
+- Start ANT-TBX<br>
+- Create a new project and load a project file <br>
+- Import Bruker raw-data 
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_brukerImport.pdf"
+target="_blank">Tutorial: "tutorial_brukerImport.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Orientation, Registration & Manual Registration</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aim</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+The tutorial covers the following topics:<br>
+- Determine the orientation of the animal brain <br>
+- Template registration  <br>
+- Manual coregistration 
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Steps</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+Prerequisites  <br>
+Data example <br>
+1) Renaming files <br>
+2) Examine Image Orientation (Panel selection) <br>
+3) Examine Image Orientation via 3-Point-Selection <br>
+4) Registration to Template - PART-1: Initialization + Auto Coregistration <br>
+5) Examine Automatic (rigid) Coregistration  <br>
+6) Adding an Animal with a Different Orientation  <br>
+7) Registration to Template - PART-2: Manual Coregistration <br>
+8) Registration to Template - PART-3: Segmentation and Nonlinear Registration <br>
+9) Check Template Registration 
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_orientation_and_manucoreg.pdf"
+target="_blank">Tutorial: "tutorial_orientation_and_manucoreg.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Multi-Tube Segmentation</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Scenario</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- several ex-vivo skullstripped mouse brains within one MR-volume<br>
+- mouse brains are differently positioned in the MR bore
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Goals</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- Isolate mouse brains<br>
+- obtain orientation type for each animal<br>
+- register brains to Allen mouse brain atlas (ABA)
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_tubeSegmentation_registration_feb2022.pdf"
+target="_blank">Tutorial: newer version "tutorial_tubeSegmentation_registration_feb2022.pdf"</a><br></font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_tubeSegmentation_manualSegment.pdf"
+target="_blank">Tutorial: another approach, a bit older "tutorial_tubeSegmentation_manualSegment.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Registration of CT-data</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aims</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+&nbsp;- warp CT-data to Allen space and inversion (atlas to native space)
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Goals & Issues</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- CT does not have enough image contrast for brain registration/segmentation.  <br>
+&nbsp; Solution: use t2w-image of the same animal & skull extraction from CT to create an inner mask of the<br>
+&nbsp; skull which roughly refers to the "brain"-volume. This volume is then registered to the Allen-brain <br>
+&nbsp; mask. The Allen-brain mask is created after registering the t2w-image to the Allen brain template<br>
+&nbsp; and after back-transform of the Allen-brain mask. Thus, registration parameters from t2w-registration<br>
+&nbsp; can be applied to the CT-image or other images. <br>
+- mouse is differently positioned (differently oriented) compared to berlin procedure. <br>
+&nbsp; Thus the header of the t2w-image has to be changed. <br>
+- t2w-image is different regarding the position/origin of the CT-image <br>
+- CT-image is different regarding the position/origin of the t2w-image <br>
+- SPECT-image is different regarding the position/origin of the CT-image 
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_CTdata_registration.pdf"
+target="_blank">Tutorial: "tutorial_CTdata_registration.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Extract Regionwise Parameter</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aims</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+&nbsp;This tutorial shows how to obtain a regionwise parameter (regionwise volume) from native space (animal space)
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Important</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- Iit is assumed that the animal is already registered to standard space.  
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_getanatomicalLabel_NativeSpace.pdf"
+target="_blank">Tutorial: "tutorial_getanatomicalLabel_NativeSpace.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Batch & Programmatically Perform A Task</h3>
+<!-- ################################################## -->
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Aims</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+&nbsp;This short tutorial shows how to obtain some batch line, modify the batch and rerun on same/other animals
+</font></p>
+<!-- ___BULLIT___ -->
+<p style="line-height:0.2;"><font color="black"><u>Covered in this tutorial:</font></u></p>
+<!-- ___TEXT___ -->
+<p style="line-height:1.2;"><font size=3px>
+- select mouse folders <br>
+- renamimg <br>
+- distribute files <br>
+- image calculation <br>
+- coregistration <br>
+- slicewise rigid/affine/nonlinear registration <br>
+- normalize: transform t2.nii from animal space to standard space <br>
+- transform other images to standard space or animal space <br>
+- extract region-based parameters from an image 
+</font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_batch.pdf"
+target="_blank">Tutorial: "tutorial_batch.pdf"</a><br></font></p>
+<!-- ############ TOPIC ######################## -->
+<h3 id="tutorials">Other Tutorials</h3>
+<!-- ################################################## -->
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_convertDICOMs.pdf"
+target="_blank">convert Dicoms-images to Nifti: "tutorial_convertDICOMs.pdf"</a><br></font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\tutorial_prepareforFSL.pdf"
+target="_blank">prepare data for FSL:    "tutorial_prepareforFSL.pdf"</a><br></font></p>
+<!-- ___LINK___ -->
+<p style="line-height:0.2;"><font size=3px>&nbsp; &#8594;
+<a href="https:\\chariteexpmri.github.io\antxdoc\docs\infos.pdf"
+target="_blank">mask approach: "infos.pdf"</a><br></font></p>
 <!--- #######################################  -->
 <!--- ### TUTORIALS-END                   ###  -->
 <!--- #######################################  -->
 
+
+<!---
 <hr>
-<!---  <h1 id="this-page-is-currently-under-construction-">This Page is currently UNDER CONSTRUCTION!</h1>  -->
+  <h1 id="this-page-is-currently-under-construction-">This Page is currently UNDER CONSTRUCTION!</h1>  
 <hr>
-    
+ -->   
     
 <br><br><br><br><br><br><br>
 
